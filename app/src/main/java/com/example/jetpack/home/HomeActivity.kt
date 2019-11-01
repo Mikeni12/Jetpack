@@ -1,10 +1,11 @@
-package com.example.jetpack
+package com.example.jetpack.home
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.jetpack.R
 import com.example.jetpack.mvvm.LifecycleActivity
 import com.example.jetpack.room.RoomActivity
 import kotlinx.android.synthetic.main.activity_home.*

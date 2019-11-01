@@ -7,7 +7,7 @@ import com.example.jetpack.room.db.entitdad.Contacto
 interface DAOContacto {
 
     @Insert
-    fun añadirContacto(contacto: Contacto): Long
+    fun crearContacto(contacto: Contacto): Long
 
     @Update
     fun actualizarContacto(contacto: Contacto)
