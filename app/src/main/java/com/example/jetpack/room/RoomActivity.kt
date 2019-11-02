@@ -2,6 +2,7 @@ package com.example.jetpack.room
 
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.jetpack.R
 import com.example.jetpack.room.adapter.AdapterContactos
 import com.example.jetpack.room.db.DAOContacto
@@ -17,6 +20,7 @@ import com.example.jetpack.room.db.DBContactos
 import com.example.jetpack.room.db.entitdad.Contacto
 import kotlinx.android.synthetic.main.activity_room.*
 import kotlinx.android.synthetic.main.dialog_contacto.view.*
+
 
 class RoomActivity : AppCompatActivity() {
 
@@ -29,11 +33,10 @@ class RoomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room)
 
-        dbContactos = Room.databaseBuilder(
-            applicationContext,
-            DBContactos::class.java,
-            "DBContactos"
-        ).allowMainThreadQueries().build()
+        dbContactos =
+            Room.databaseBuilder(applicationContext, DBContactos::class.java, "DBContactos")
+                .allowMainThreadQueries()
+                .build()
 
         daoContactos = dbContactos.obtenerDAOContacto()
         contactos = ArrayList(daoContactos.obtenerContactos())
@@ -44,15 +47,16 @@ class RoomActivity : AppCompatActivity() {
         recyclerContacts.itemAnimator = DefaultItemAnimator()
         recyclerContacts.adapter = adapterContactos
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener {
             crearYActualizarContacto(false, null, -1)
         }
     }
 
     private fun actualizarContacto(nombre: String, email: String, posicion: Int) {
-        val contacto = contactos[posicion]
-        contacto.nombre = nombre
-        contacto.email = email
+        val contacto = contactos[posicion].apply {
+            this.nombre = nombre
+            this.email = email
+        }
 
         daoContactos.actualizarContacto(contacto)
         contactos[posicion] = contacto
