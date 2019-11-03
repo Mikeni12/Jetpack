@@ -1,9 +1,10 @@
-package com.example.jetpack
+package com.example.jetpack.databinding.advanced
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-
+import com.example.jetpack.R
+import com.example.jetpack.databinding.Estudiante
 import kotlinx.android.synthetic.main.activity_advanced_binding.*
 
 class AdvancedBinding : AppCompatActivity() {
@@ -18,5 +19,8 @@ class AdvancedBinding : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
     }
+
+    private fun obtenerEstudiante(): Estudiante = Estudiante("Miguel", "miguel@gmail.com")
+
 
 }
