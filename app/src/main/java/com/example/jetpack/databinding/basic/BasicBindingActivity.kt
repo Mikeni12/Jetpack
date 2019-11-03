@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.jetpack.R
 import com.example.jetpack.databinding.ActivityBasicBindingBinding
+import com.example.jetpack.databinding.Estudiante
 
 class BasicBindingActivity : AppCompatActivity() {
 
@@ -23,8 +24,7 @@ class BasicBindingActivity : AppCompatActivity() {
         dataBinding.clickHandler = handlers
     }
 
-    private fun obtenerEstudiante(): Estudiante =
-        Estudiante("Miguel", "miguel@gmail.com")
+    private fun obtenerEstudiante(): Estudiante = Estudiante("Miguel", "miguel@gmail.com")
 
     inner class ActivityClickHandlers(val context: Context) {
         fun onInscribirButtonClick(view: View) {

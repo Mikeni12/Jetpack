@@ -12,10 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".AdvancedBinding"
-            android:label="@string/title_activity_advanced_binding"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mvvm.LifecycleActivity" />
-        <activity android:name=".room.RoomActivity" />
-        <activity android:name=".databinding.basic.BasicBindingActivity" />
+        <activity
+            android:name=".mvvm.LifecycleActivity"
+            android:label="@string/title_activity_mvvm" />
+        <activity
+            android:name=".room.RoomActivity"
+            android:label="@string/title_activity_room" />
+        <activity
+            android:name=".databinding.basic.BasicBindingActivity"
+            android:label="@string/title_activity_basic_binding" />
+        <activity
+            android:name=".databinding.advanced.AdvancedBindingActivity"
+            android:label="@string/title_activity_advanced_binding"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

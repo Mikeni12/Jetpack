@@ -5,7 +5,7 @@
 
         <variable
             name="estudiante"
-            type="com.example.jetpack.databinding.basic.Estudiante" />
+            type="com.example.jetpack.databinding.Estudiante" />
 
         <variable
             name="clickHandler"

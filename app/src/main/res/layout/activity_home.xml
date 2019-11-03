@@ -19,19 +19,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ROOM"
-        app:layout_constraintBottom_toTopOf="@id/btnDataBinding"
+        app:layout_constraintBottom_toTopOf="@id/btnBasicBinding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnMVVM" />
 
     <Button
-        android:id="@+id/btnDataBinding"
+        android:id="@+id/btnBasicBinding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DATA BINDING"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="DATA BINDING BASICO"
+        app:layout_constraintBottom_toTopOf="@id/btnAdvancedBinding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnROOM" />
+
+    <Button
+        android:id="@+id/btnAdvancedBinding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATA BINDING AVANZADO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBasicBinding" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
