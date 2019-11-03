@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".room.RoomActivity">
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_room" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
