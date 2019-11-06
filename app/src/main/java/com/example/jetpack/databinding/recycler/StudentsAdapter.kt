@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.jetpack.databinding.ItemEstudianteBinding
 import com.example.jetpack.databinding.Student
 
-class StudentsAdapter(private var items: ArrayList<Student>/*, private val actividad: RoomActivity*/) :
+class StudentsAdapter(private var items: ArrayList<Student>) :
     RecyclerView.Adapter<StudentsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

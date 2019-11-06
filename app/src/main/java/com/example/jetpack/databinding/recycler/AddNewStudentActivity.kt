@@ -28,11 +28,11 @@ class AddNewStudentActivity : AppCompatActivity() {
 
     inner class AddNewStudentActivityClickHandler {
         fun onSubmitClicked(view: View) {
-            val isIncorrect = student.getName().isNullOrBlank() &&
-                    student.getEmail().isNullOrBlank() &&
+            val isIncorrect = student.getName().isNullOrBlank() ||
+                    student.getEmail().isNullOrBlank() ||
                     student.getCountry().isNullOrBlank()
             if (isIncorrect) {
-                Toast.makeText(applicationContext, "Nombre vacío", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "Campo vacío", Toast.LENGTH_LONG).show()
             } else {
                 val intent = Intent().apply {
                     putExtra("NAME", student.getName())

@@ -38,7 +38,6 @@ class RecyclerBindingActivity : AppCompatActivity() {
 
         val recycler = activityRecyclerBinding.layoutContentRecycler.recyclerEstudiantes
         recycler.layoutManager = LinearLayoutManager(this)
-        recycler.setHasFixedSize(true)
         recycler.adapter = adapter
 
         studentDB =

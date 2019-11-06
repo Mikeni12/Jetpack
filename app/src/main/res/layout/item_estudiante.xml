@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/tvName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{student.name}"
             android:textSize="20sp"
@@ -26,7 +26,7 @@
 
         <TextView
             android:id="@+id/tvEmail"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{student.email}"
             android:textSize="20sp" />
@@ -40,7 +40,7 @@
 
             <TextView
                 android:id="@+id/tvCountry"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@{student.country}"
@@ -48,7 +48,7 @@
 
             <TextView
                 android:id="@+id/tvTime"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@{student.registeredTime}"
