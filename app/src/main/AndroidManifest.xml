@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".databinding.exercise.FullBindingActivity"></activity>
+        <activity android:name=".databinding.recycler.AddNewStudentActivity"></activity>
+        <activity
+            android:name=".databinding.recycler.RecyclerBindingActivity"
+            android:label="@string/title_activity_recycler_binding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".databinding.exercise.FullBindingActivity" />
         <activity android:name=".home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

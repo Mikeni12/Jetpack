@@ -4,4 +4,5 @@
     <string name="title_activity_room">ROOM</string>
     <string name="title_activity_basic_binding">Basic Data Binding</string>
     <string name="title_activity_advanced_binding">Advanced Data Binding</string>
+    <string name="title_activity_recycler_binding">RecyclerBindingActivity</string>
 </resources>

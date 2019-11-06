@@ -1,57 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/btnMVVM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MVVM"
-        app:layout_constraintBottom_toTopOf="@id/btnROOM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="MVVM" />
 
     <Button
         android:id="@+id/btnROOM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ROOM"
-        app:layout_constraintBottom_toTopOf="@id/btnBasicBinding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnMVVM" />
+        android:text="ROOM" />
 
     <Button
         android:id="@+id/btnBasicBinding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DATA BINDING BASICO"
-        app:layout_constraintBottom_toTopOf="@id/btnAdvancedBinding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnROOM" />
+        android:text="DATA BINDING BASICO" />
 
     <Button
         android:id="@+id/btnAdvancedBinding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DATA BINDING AVANZADO"
-        app:layout_constraintBottom_toTopOf="@id/btnFulldBinding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBasicBinding" />
+        android:text="DATA BINDING AVANZADO" />
 
     <Button
         android:id="@+id/btnFulldBinding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DATA BINDING COMPLETO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAdvancedBinding" />
+        android:text="DATA BINDING COMPLETO" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnRecyclerBinding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATA BINDING RECYCLER" />
+
+</LinearLayout>

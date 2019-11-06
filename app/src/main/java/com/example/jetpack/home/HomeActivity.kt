@@ -9,6 +9,7 @@ import com.example.jetpack.R
 import com.example.jetpack.databinding.advanced.AdvancedBindingActivity
 import com.example.jetpack.databinding.basic.BasicBindingActivity
 import com.example.jetpack.databinding.exercise.FullBindingActivity
+import com.example.jetpack.databinding.recycler.RecyclerBindingActivity
 import com.example.jetpack.mvvm.LifecycleActivity
 import com.example.jetpack.room.RoomActivity
 import kotlinx.android.synthetic.main.activity_home.*
@@ -21,6 +22,7 @@ class HomeActivity : AppCompatActivity() {
 
         btnAdvancedBinding.setOnClickListener { this.iniciarActividad<FullBindingActivity>() }
         btnBasicBinding.setOnClickListener { this.iniciarActividad<BasicBindingActivity>() }
+        btnRecyclerBinding.setOnClickListener { this.iniciarActividad<RecyclerBindingActivity>() }
         btnMVVM.setOnClickListener { this.iniciarActividad<LifecycleActivity>() }
         btnROOM.setOnClickListener { this.iniciarActividad<RoomActivity>() }
     }
